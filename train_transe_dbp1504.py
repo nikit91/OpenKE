@@ -39,7 +39,7 @@ def main():
 	)
 	print("Starting training")
 	# train the model
-	trainer = Trainer(model = model, data_loader = train_dataloader, train_times = 5, alpha = 1.0, use_gpu = True)
+	trainer = Trainer(model = model, data_loader = train_dataloader, train_times = 5, alpha = 1.0, use_gpu = False)
 	trainer.run()
 	print("Training finished. Saving model.")
 	transe.save_checkpoint('./checkpoint/transe_dbpedia201504.ckpt')
