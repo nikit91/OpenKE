@@ -11,7 +11,7 @@ def main():
 	# dataloader for training
 	train_dataloader = TrainDataLoader(
 		in_path = "./dbpedia-2015-04/",
-		nbatches = 10,
+		nbatches = 100000,
 		threads = 8,
 		sampling_mode = "normal",
 		bern_flag = 1,
