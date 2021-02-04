@@ -89,11 +89,12 @@ class TrainDataLoader(object):
 		self.relTotal = self.lib.getRelationTotal()
 		self.entTotal = self.lib.getEntityTotal()
 		self.tripleTotal = self.lib.getTrainTotal()
-
+		print("Total triples: ", self.tripleTotal)
 		if self.batch_size == None:
 			self.batch_size = self.tripleTotal // self.nbatches
 		if self.nbatches == None:
 			self.nbatches = self.tripleTotal // self.batch_size
+		print("Batch Size: ", self.batch_size)
 		self.batch_seq_size = self.batch_size * (1 + self.negative_ent + self.negative_rel)
 
 		self.batch_h = np.zeros(self.batch_seq_size, dtype=np.int64)
