@@ -11,12 +11,12 @@ def main():
 	# dataloader for training
 	train_dataloader = TrainDataLoader(
 		in_path = "./dbpedia-2015-04/",
-		batch_size = 64,
+		batch_size = 8,
 		threads = 8,
 		sampling_mode = "normal",
 		bern_flag = 1,
 		filter_flag = 1,
-		neg_ent = 25,
+		neg_ent = 1,
 		neg_rel = 0)
 
 	# dataloader for test
